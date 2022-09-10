@@ -117,3 +117,14 @@ function paperwork(n, m) {
 }
 
 console.log(paperwork(-1, 5));
+
+// 39
+// Sum of positive
+// https://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript
+
+function positiveSum(arr) {
+  const positiveArr = arr.filter((number) => number >= 0);
+  return positiveArr.reduce((prev, next) => prev + next, 0);
+}
+
+console.log(positiveSum([1, -2, 3, 4, 5]));
