@@ -128,3 +128,11 @@ function positiveSum(arr) {
 }
 
 console.log(positiveSum([1, -2, 3, 4, 5]));
+
+// 40
+// String repeat
+// https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript
+
+const repeatStr = (n, s) => s.repeat(n);
+
+console.log(repeatStr(3, '*'));
