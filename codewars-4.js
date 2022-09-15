@@ -33,3 +33,14 @@ function smash(words) {
   return words.join(' ');
 }
 console.log(smash(['hello', 'amazing', 'world']));
+
+// 44
+// Remove the minimum
+// https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
+function removeSmallest(numbers) {
+  return numbers.filter(
+    (_, index) => index !== numbers.indexOf(Math.min(...numbers))
+  );
+}
+
+console.log(removeSmallest([2, 2, 1, 2, 1]));
