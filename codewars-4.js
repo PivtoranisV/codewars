@@ -44,3 +44,18 @@ function removeSmallest(numbers) {
 }
 
 console.log(removeSmallest([2, 2, 1, 2, 1]));
+
+// 45
+// Get the Middle Character
+// https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript
+function getMiddle(s) {
+  const middleIndex = s.length / 2;
+  return s.length % 2 === 0
+    ? s
+        .split('')
+        .splice(middleIndex - 1, 2)
+        .join('')
+    : s.split('').splice(middleIndex, 1).join('');
+}
+
+console.log(getMiddle('testing'));
