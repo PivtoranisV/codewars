@@ -69,3 +69,18 @@ function find_average(array) {
 }
 
 console.log(find_average([1, 2, 3, 4]));
+
+// 47
+// Total amount of points
+// https://www.codewars.com/kata/5bb904724c47249b10000131/train/javascript
+function points(games) {
+  const pointsForEachGame = games.map((el) =>
+    el[0] > el[2] ? 3 : el[0] === el[2] ? 1 : 0
+  );
+
+  return pointsForEachGame.reduce((prev, next) => prev + next);
+}
+
+console.log(
+  points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3'])
+);
