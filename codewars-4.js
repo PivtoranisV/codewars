@@ -84,3 +84,24 @@ function points(games) {
 console.log(
   points(['1:0', '2:0', '3:0', '4:0', '2:1', '3:1', '4:1', '3:2', '4:2', '4:3'])
 );
+
+// 47
+// Number of People in the Bus
+//https://www.codewars.com/kata/5648b12ce68d9daa6b000099/train/javascript
+const number = (busStops) => {
+  const getInto = busStops.map((el) => el[0]);
+  const getIntoTotal = getInto.reduce((prev, next) => prev + next);
+
+  const getOff = busStops.map((el) => el[1]);
+  const getOffTotal = getOff.reduce((prev, next) => prev + next);
+
+  return getIntoTotal - getOffTotal;
+};
+
+console.log(
+  number([
+    [10, 0],
+    [3, 5],
+    [5, 8],
+  ])
+);
