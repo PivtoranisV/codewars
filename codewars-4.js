@@ -105,3 +105,13 @@ console.log(
     [5, 8],
   ])
 );
+
+// 48
+// Transportation on vacation
+// https://www.codewars.com/kata/568d0dd208ee69389d000016/train/javascript
+function rentalCarCost(d) {
+  const rentalCost = d * 40;
+  return d < 3 ? rentalCost : d >= 7 ? rentalCost - 50 : rentalCost - 20;
+}
+
+console.log(rentalCarCost(7));
