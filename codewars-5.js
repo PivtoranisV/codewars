@@ -51,3 +51,12 @@ function getGrade(s1, s2, s3) {
   } else return 'F';
 }
 console.log(getGrade(52, 8, 87));
+
+// 54
+// Remove exclamation marks
+// https://www.codewars.com/kata/57a0885cbb9944e24c00008e/train/javascript
+function removeExclamationMarks(s) {
+  return [...s].filter((el) => el !== '!').join('');
+}
+
+console.log(removeExclamationMarks('Hello World!'));
