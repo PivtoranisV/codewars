@@ -60,3 +60,13 @@ function removeExclamationMarks(s) {
 }
 
 console.log(removeExclamationMarks('Hello World!'));
+
+// 55
+// You're a square!
+// https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/javascript
+const isSquare = (n) => {
+  const squareRoot = Math.sqrt(n);
+  return squareRoot % 1 === 0;
+};
+
+console.log(isSquare(100));
