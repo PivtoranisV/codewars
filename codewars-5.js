@@ -70,3 +70,13 @@ const isSquare = (n) => {
 };
 
 console.log(isSquare(100));
+
+// 56
+// How good are you really?
+// https://www.codewars.com/kata/5601409514fc93442500010b/train/javascript
+function betterThanAverage(classPoints, yourPoints) {
+  const averagePoints =
+    classPoints.reduce((prev, next) => prev + next) / classPoints.length;
+  return yourPoints > averagePoints;
+}
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
