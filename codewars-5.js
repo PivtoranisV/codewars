@@ -80,3 +80,22 @@ function betterThanAverage(classPoints, yourPoints) {
   return yourPoints > averagePoints;
 }
 console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+
+// 57
+// Exes and Ohs
+// https://www.codewars.com/kata/55908aad6620c066bc00002a/train/javascript
+function XO(str) {
+  const countX = str
+    .toLowerCase()
+    .split('')
+    .filter((el) => el === 'x').length;
+
+  const countO = str
+    .toLowerCase()
+    .split('')
+    .filter((el) => el === 'o').length;
+
+  return countX === countO;
+}
+
+console.log(XO('xxxOo'));
