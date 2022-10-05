@@ -99,3 +99,24 @@ function XO(str) {
 }
 
 console.log(XO('xxxOo'));
+
+// 58
+// Two Sum
+// https://www.codewars.com/kata/52c31f8e6605bcc646000082/train/javascript
+function twoSum(numbers, target) {
+  for (let i = 0; i < numbers.length; i++) {
+    let indexOfDiff;
+    let currentNum = numbers[i];
+    let diff = target - currentNum;
+    if (numbers.includes(diff)) {
+      indexOfDiff = numbers.indexOf(diff);
+      if (indexOfDiff !== i) {
+        return [i, indexOfDiff];
+      }
+    }
+  }
+}
+
+console.log(
+  twoSum([-472, 465, -682, -790, -982, 58, 148, -977, 112, 837, -122], -64)
+);
