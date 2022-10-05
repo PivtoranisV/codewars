@@ -120,3 +120,13 @@ function twoSum(numbers, target) {
 console.log(
   twoSum([-472, 465, -682, -790, -982, 58, 148, -977, 112, 837, -122], -64)
 );
+
+// 59
+// Will there be enough space?
+// https://www.codewars.com/kata/5875b200d520904a04000003/train/javascript
+function enough(cap, on, wait) {
+  const leftOnBusStop = on + wait - cap;
+  return leftOnBusStop < 0 ? 0 : leftOnBusStop;
+}
+
+console.log(enough(20, 5, 25));
