@@ -107,3 +107,51 @@ function multiply(argArr, argNum) {
 }
 
 console.log(overloadedFunc());
+
+// 11 *
+const combineFunctions =
+  (...funcs) =>
+  (initialArg) =>
+    funcs.reduce((acc, func) => func(acc), initialArg);
+
+// 12 *
+
+let students = [
+  {
+    name: 'Anna',
+    languages: ['English', 'Ukrainian'],
+    age: 21,
+  },
+  {
+    name: 'Bob',
+    languages: ['Polish', 'Spanish'],
+    age: 26,
+  },
+  {
+    name: 'Alice',
+    languages: ['Italian', 'Russian'],
+    age: 18,
+  },
+];
+
+// function getLanguages(students, funcCondition) {
+//   return students.filter(funcCondition).map((student) => student.languages);
+// }
+
+const getLanguages = (students, funcCondition = condition) => {
+  let languages = [];
+  students.reduce((accumulator, student) => {
+    if (funcCondition(student)) {
+      accumulator.push(student.languages);
+    }
+    languages = accumulator;
+    return accumulator;
+  }, []);
+  return languages.flat();
+};
+
+function condition(student) {
+  return student;
+}
+
+console.log(getLanguages(students, (student) => student.name.startsWith('A')));
