@@ -16,3 +16,16 @@ console.log(shortcut('complain'));
 const grow = (x) => x.reduce((perv, next) => perv * next);
 
 console.log(grow([1, 2, 3]));
+
+//62
+//shorter concat [reverse longer]
+//https://www.codewars.com/kata/54557d61126a00423b000a45/train/javascript
+function shorter_reverse_longer(a, b) {
+  console.log([...a]);
+
+  return a.length >= b.length
+    ? b.concat(a.split('').reverse().join(''), b)
+    : a.concat(b.split('').reverse().join(''), a);
+}
+
+console.log(shorter_reverse_longer('first', 'abcde'));
