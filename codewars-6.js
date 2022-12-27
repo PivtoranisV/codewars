@@ -21,8 +21,6 @@ console.log(grow([1, 2, 3]));
 //shorter concat [reverse longer]
 //https://www.codewars.com/kata/54557d61126a00423b000a45/train/javascript
 function shorter_reverse_longer(a, b) {
-  console.log([...a]);
-
   return a.length >= b.length
     ? b.concat(a.split('').reverse().join(''), b)
     : a.concat(b.split('').reverse().join(''), a);
