@@ -27,3 +27,15 @@ function shorter_reverse_longer(a, b) {
 }
 
 console.log(shorter_reverse_longer('first', 'abcde'));
+
+//63
+//Mumbling
+//https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript
+
+function accum(s) {
+  return [...s]
+    .map((el, index) => el.toUpperCase() + el.toLowerCase().repeat(index))
+    .join('-');
+}
+
+console.log(accum('ZpglnRxqenU'));
