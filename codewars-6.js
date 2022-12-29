@@ -39,3 +39,14 @@ function accum(s) {
 }
 
 console.log(accum('ZpglnRxqenU'));
+
+//64
+//Sort the odd
+//https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
+function sortArray(array) {
+  const odds = array.filter((el) => el % 2).sort((a, b) => a - b);
+
+  return array.map((el) => (el % 2 ? odds.shift() : el));
+}
+
+console.log(sortArray([5, 3, 2, 8, 1, 4]));
