@@ -50,3 +50,19 @@ function sortArray(array) {
 }
 
 console.log(sortArray([5, 3, 2, 8, 1, 4]));
+
+//65
+//Counting Duplicates
+//https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/javascript
+
+function duplicateCount(text) {
+  const CharacterCount = text.toLowerCase().split('').reduce(frequency, {});
+  return Object.values(CharacterCount).filter((el) => el > 1).length;
+
+  function frequency(prop, value) {
+    prop[value] ? prop[value]++ : (prop[value] = 1);
+    return prop;
+  }
+}
+
+console.log(duplicateCount('aabBcde'));
